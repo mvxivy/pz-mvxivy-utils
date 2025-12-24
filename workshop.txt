@@ -1,6 +1,6 @@
 version=1
-id=
+id=3630174904
 title=MVXIVY utils
-description=
-tags=Build 42;Utils
+description=Utilities for my mods
+tags=Build 42
 visibility=public
