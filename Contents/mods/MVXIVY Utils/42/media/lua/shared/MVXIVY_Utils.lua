@@ -69,4 +69,23 @@ function MVXIVY_Utils.throttledFnByTicks(fn, ticks)
   end
 end
 
+MVXIVY_Utils.sandbox = {}
+
+--- Get the value of a Sandbox option by its path.
+-- @param path table A table representing the path to the option (e.g., {"STNIMBLE_B42","XPPerPulse"}).
+-- @param fallback any A fallback value to return if the option is not found.
+function MVXIVY_Utils.sandbox.getOptionValue(path, fallback)
+  local t = SandboxVars
+  for i = 1, #path do
+    if type(t) ~= "table" then
+      return fallback
+    end
+    t = t[path[i]]
+  end
+  if t == nil then
+    return fallback
+  end
+  return t
+end
+
 return MVXIVY_Utils
