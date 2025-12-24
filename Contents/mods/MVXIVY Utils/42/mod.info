@@ -1,0 +1,9 @@
+id=MVXIVY_UTILS
+name=MVXIVY Utilities
+poster=poster.png
+icon=icon.png
+description=Utilities for MVXIVY mods
+author=MaxIvy
+modversion=1.0.0
+pzversion=42
+versionMin=42.0.0
