@@ -88,4 +88,19 @@ function MVXIVY_Utils.sandbox.getOptionValue(path, fallback)
   return t
 end
 
+local function gameVersionIsAtLeast4213()
+	local gameVersion = tostring(getCore():getGameVersion())
+  local major, minor = gameVersion:match("^(%d+)%.(%d+)")
+  major = tonumber(major)
+  minor = tonumber(minor)
+  if not major or not minor then return false end
+  if major == 42 and minor >= 13 then
+    return true
+  else
+    return false
+  end
+end
+
+MVXIVY_Utils.gameVersionIsAtLeast4213 = gameVersionIsAtLeast4213
+
 return MVXIVY_Utils
